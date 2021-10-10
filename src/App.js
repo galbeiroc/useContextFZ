@@ -1,10 +1,16 @@
+
+// Import components
+import Profile from './components/Profile';
+import UserLits from './components/UserList';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello world</h1>
-    </div>
+    <>
+      <UserLits />
+      <Profile />
+    </>
   );
 }
 
