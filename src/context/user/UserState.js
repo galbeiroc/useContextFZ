@@ -16,13 +16,17 @@ const UserState = (props) => {
   // get all user
   const getUsers = async() => {
     const response = await axios.get('https://reqres.in/api/users');
-    console.log('all', response.data.data);
+
+    dispatch({
+      type: 'GET_USERS',
+      payload: response.data.data,
+    });
   };
 
   // get only user
   const getProfile = async(id) => {
     const response = await axios.get(`https://reqres.in/api/users/${id}`);
-    console.log('single', response);
+    console.log('single', response.data);
   };
 
   return (
