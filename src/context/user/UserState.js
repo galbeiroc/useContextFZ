@@ -26,7 +26,11 @@ const UserState = (props) => {
   // get only user
   const getProfile = async(id) => {
     const response = await axios.get(`https://reqres.in/api/users/${id}`);
-    console.log('single', response.data);
+
+    dispatch({
+      type: 'GET_PROFILE',
+      payload: response.data.data,
+    });
   };
 
   return (
