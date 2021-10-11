@@ -1,6 +1,6 @@
 import { GET_PROFILE, GET_USERS } from "../types";
 
-export default (state, action) => {
+function UserReducer(state, action) {
   const { payload, type } = action;
 
   switch (type) {
@@ -18,3 +18,5 @@ export default (state, action) => {
       return state;
   }
 };
+
+export default UserReducer;
