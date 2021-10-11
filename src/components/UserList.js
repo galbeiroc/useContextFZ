@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import UserContext from '../context/user/UserContext';
 
 function UserList() {
-  const { getUsers, users } = useContext(UserContext);
+  const { getUsers, getProfile, users } = useContext(UserContext);
 
   useEffect(() => {
     getUsers();
@@ -17,6 +17,7 @@ function UserList() {
             href="#!"
             key={user.id}
             className="list-group-item list-group-item-action d-flex flex-row justify-content-start"
+            onClick={() => getProfile(user.id)}
           >
             <img 
               src={user.avatar}
