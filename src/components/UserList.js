@@ -8,7 +8,6 @@ function UserList() {
     getUsers();
   }, []);
 
-  console.log(users);
   return (
     <div className="list-group h-100">
       {

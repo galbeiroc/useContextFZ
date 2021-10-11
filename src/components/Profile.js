@@ -3,7 +3,6 @@ import UserContext from '../context/user/UserContext';
 
 function Profile() {
   const { selectedUser } = useContext(UserContext);
-  console.log(selectedUser);
 
   return (
     <>
