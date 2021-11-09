@@ -1,4 +1,4 @@
-import { GET_PROFILE, GET_USERS } from "../types";
+import { GET_PROFILE, GET_USERS } from "../Types";
 
 function UserReducer(state, action) {
   const { payload, type } = action;
